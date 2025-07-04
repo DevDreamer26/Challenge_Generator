@@ -13,7 +13,7 @@ export const useApi = () =>{
             }
         }
 
-        const response = await fetch(`http://localhost:8000/api/${endpoint}`,{
+        const response = await fetch(`${import.meta.env.VITE_BACKEND_URL}/api/${endpoint}`,{
             ...defaultoptions,
             ...options
         })
